@@ -15,9 +15,13 @@ attr_reader :player1, :player2, :turn
   def turn_end
     @turn += 1
   end
-  
 
-    
+  def current_player
+    if turn % 2 == 0
+      @player2
+    else
+      @player1
+    end
+  end
 
-  
 end
